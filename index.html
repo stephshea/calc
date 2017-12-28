@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<link href="calculator.css" rel="stylesheet">
+	<style>
+		@media screen and (max-width: 420px) 
+		{
+
+			#calculator {
+				width: 360px;
+			}
+
+			#displayHere {
+				font-size: 1.5em;
+				margin: .5em 0;
+			}
+
+			#totalHeading {
+				font-size: 1.5em;
+			}
+			.key, .opp, .equal, .clear {
+				font-size: 1.5em; 
+				width: 2em;
+				height: 2em;
+			}
+		}
+	</style>
+	<title>Calculator</title>
+</head>
+<body>
+	<div class="container">
+		<div id="calculator">
+			<input id="displayHere" type="text">
+			<div id='totalHeading'>
+				Total: <span id="total"></span>
+			</div>
+			<div>
+				<button class='clear' onclick='allClear()' value='AC'>AC</button>
+				<button class='clear' onclick='clearLast()' value='C'>C</button>
+			</div>
+			<div>
+				<button class='key' onclick='toDisplay("1")' value='1'>1</button>
+				<button class='key' onclick='toDisplay("2")' value='2'>2</button> 
+				<button class='key' onclick='toDisplay("3")' value='3'>3</button> 
+				<button class='add' onclick='toDisplay("+")' value='+'>+</button>
+			</div>
+			<div>
+				<button class='key' onclick='toDisplay("4")' value='4'>4</button> 
+				<button class='key' onclick='toDisplay("5")' value='5'>5</button> 
+				<button class='key' onclick='toDisplay("6")' value='6'>6</button> 
+				<button class='subtract' onclick='toDisplay("-")' value='-'>-</button>
+			</div>
+			<div>
+				<button class='key' onclick='toDisplay("7")' value='7'>7</button>
+				<button class='key' onclick='toDisplay("8")' value='8'>8</button> 
+				<button class='key' onclick='toDisplay("9")' value='9'>9</button> 
+				<button class='multiply' onclick='multiply()' value='*'>*</button>
+			</div>
+			<div>
+				<button class='key' onclick='toDisplay("0")' value='0'>0</button>
+				<button class='key' onclick='toDisplay(".")' value='.'>.</button> 
+				<button class='equal' onclick='equal()' value='='>=</button>
+				<button class='divide' onclick='toDisplay("/")' value='/'>/</button>
+			</div>
+		</div>
+		<script src="https://use.fontawesome.com/d117184189.js">
+		</script> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+		</script> 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+		</script> 
+		<script src="calculator.js">
+		</script>
+	</div>
+</body>
+</html>
