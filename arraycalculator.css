@@ -1,0 +1,42 @@
+#displayHere {
+	font-size: 2em;
+	margin: .5em 0;
+}
+#calculator {
+	width: 460px;
+	margin: 2em auto;
+	border: groove #990000 1em;
+	border-radius: 20px;
+	padding: 1em;
+}
+#total {
+	margin-top: 2em;
+}
+#totalHeading {
+	font-size: 2em;
+}
+.key, .equal, .clear {
+	font-size: 2em;
+}
+.key {
+	width: 3em;
+	height: 3em;
+	background-color: azure;
+}
+.add, .subtract, .multiply, .divide {
+	width: 3em;
+	height: 3em;
+	background-color: #990000;
+	color: white;
+	font-size: 2em;
+}
+.equal {
+	width: 3em;
+	background-color: yellow;
+	height: 3em;
+}
+.clear {
+	width: 3em;
+	background-color: yellow;
+	height: 3em;
+}
