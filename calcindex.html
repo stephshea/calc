@@ -8,16 +8,14 @@
 </head>
 <body>
     
-    <h1>Display: <span id="displayHere"></span></h1>
-<input type="text" id="input" />
+   	<input id="displayHere" type="text">
 
-    <button id="one" type="input" value="1">1</button>
-    
-    <input type="button" id="two" value="2" />
-   <input id="button" type="submit" name="button" onclick="add()" />
-  
-    <input type="button" id="multiply" value= * />
-    	
+    	<button class='key' type = "number" onclick='toDisplay("4")' value='4'>4</button> 
+		<button class='key' type = "number" onclick='toDisplay("5")' value='5'>5</button> 
+		<button class='key' type = "number" onclick='toDisplay("6")' value='6'>6</button>
+  <button class='multiply' onclick='multiply()' value='=*'>+*</button>
+
+    	<button class='equal' onclick='equal()' value='='>=</button>
     	  <script src="https://use.fontawesome.com/d117184189.js">
 	</script> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">

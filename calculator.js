@@ -3,15 +3,9 @@
 var total = 0;
 var display = "";
 
-function updateDisplay() {
+// function updateDisplay() {
 	
-}
-
-function multiply(a, b) {
-var result = a * b;
-return result;
-display = document.getElementById("displayHere").value += val;
-}
+// }
 
 //https://watchandcode.com/courses/60264/lectures/1027554 V8
 //var addTodoTextInput = document.getElementById('addTodoTextInput');
@@ -21,6 +15,16 @@ display = document.getElementById("displayHere").value += val;
 function toDisplay(val) {
 	display = document.getElementById("displayHere").value += val;
 }
+
+// function multiply(a, b) {
+// var result = a * b;
+// return result;
+// $("#total").html(eval(display));
+// 	return total;
+// // display = document.getElementById("displayHere").value += val;
+// }
+
+
 
 function clearLast() {
 	display = display.substring(0, display.length - 1);
