@@ -36,7 +36,7 @@
 <body>
 	<div class="container">
 		<div id="calculator">
-			<input id="displayHere" type="text">
+			<input id="displayHere">
 			<div id='totalHeading'>
 				Total: <span id="total"></span>
 			</div>
@@ -45,28 +45,28 @@
 				<button class='clear' onclick='clearLast()' value='C'>C</button>
 			</div>
 			<div>
-				<button class='key' onclick='toDisplay(1)' type="number" value='+1'>1</button>
-				<button class='key' onclick='toDisplay(2)' type="number" value='+2'>2</button> 
-				<button class='key' onclick='toDisplay(3)' type="number" value='+3'>3</button> 
-				<button class='add' onclick='toDisplay("+")' value='+'>+</button>
+				<button class='key' onclick='toDisplay(1)' type="number" value='1'>1</button>
+				<button class='key' onclick='toDisplay(2)' type="number" value='2'>2</button> 
+				<button class='key' onclick='toDisplay(3)' type="number" value='3'>3</button> 
+				<button class='add' onclick='toDisplay("+"), add()'>+</button>
 			</div>
 			<div>
 				<button class='key' onclick='toDisplay("4")' value='4'>4</button> 
 				<button class='key' onclick='toDisplay("5")' value='5'>5</button> 
 				<button class='key' onclick='toDisplay("6")' value='6'>6</button> 
-				<button class='subtract' onclick='toDisplay("-")' value='-'>-</button>
+				<button class='subtract' onclick='toDisplay("-") subtract()' value='-'>-</button>
 			</div>
 			<div>
 				<button class='key' onclick='toDisplay("7")' value='7'>7</button>
 				<button class='key' onclick='toDisplay("8")' value='8'>8</button> 
 				<button class='key' onclick='toDisplay("9")' value='9'>9</button> 
-				<button class='multiply' onclick='multiply()' onclick='toDisplay("*")' value='*'>*</button>
+				<button class='multiply' onclick='toDisplay("*"), multiply()'  value='*'>*</button>
 			</div>
 			<div>
 				<button class='key' onclick='toDisplay("0")' value='0'>0</button>
 				<button class='key' onclick='toDisplay(".")' value='.'>.</button> 
 				<button class='equal' onclick='equal()' value='='>=</button>
-				<button class='divide' onclick='toDisplay("/")' value='/'>/</button>
+				<button class='divide' onclick='toDisplay("/") divide()' value='/'>/</button>
 			</div>
 		</div>
 		<script src="https://use.fontawesome.com/d117184189.js">
