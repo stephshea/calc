@@ -2,8 +2,8 @@
 //$(document).ready(function(){
 var runningTotal = "";
 var display = document.getElementById("displayHere");
-var operator = "";
-var storedNum= "";
+var operation = "";
+var memNum= "";
 var currentNum = '';
 
 function toDisplay(val) {
