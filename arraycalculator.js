@@ -6,8 +6,8 @@
 var displayHere = "";
 // displayHere = $("#displayHere");
 displayHere = document.getElementById("displayHere");
-var firstNum= '';
-var secondNum = '';
+var storedNum= '';
+var currentNum = '';
 var operator ='';
 var runningTotal='';
 
@@ -15,84 +15,77 @@ var runningTotal='';
 
 function addNumber(abby) {
     console.log("click");
-    secondNum += abby;
+    currentNum += abby;
 
-displayHere.value = secondNum;
+displayHere.value = currentNum;
 console.log(displayHere);
 }
 
 
 function operation(value) {
-    console.log("click op");
-    if (firstNum !== "") {
-        console.log("equals()");
+    if (storedNum !== "") {
         equals();
         operator = value;
       
     }
     else {
-        console.log("else");
+        
         operator = value;
-        firstNum = secondNum;
-        secondNum = "";
-        displayHere.value = firstNum;
+        storedNum = currentNum;
+        currentNum = "";
+        displayHere.value = storedNum;
     }
-    console.log(firstNum, operator);
+    console.log(storedNum, operator);
 }
 
 
 // $("#operator").click(function() {
-// secondNum += $(this).text();	
-// secondNum = firstNum;
-// firstNum = '';
+// currentNum += $(this).text();	
+// currentNum = storedNum;
+// storedNum = '';
 // display.text("0");
 // });
-
-
-// // function toDisplay(val) {
-// // firstNum = document.getElementById("displayHere").value += val;
-
-// // }
 
 function equals() {
 //operations
 console.log("equals");
 
 if (operator === "+") {
-runningTotal = parseFloat(firstNum, 10) + parseFloat(secondNum, 10);
+runningTotal = parseFloat(storedNum, 10) + parseFloat(currentNum, 10);
 }
 
 if (operator === "-") {
-runningTotal = parseFloat(firstNum, 10) - parseFloat(secondNum, 10);
+runningTotal = parseFloat(storedNum, 10) - parseFloat(currentNum, 10);
 
 }
 
 if (operator === "*") {
-runningTotal = parseFloat(firstNum, 10) * parseFloat(secondNum, 10);
+runningTotal = parseFloat(storedNum, 10) * parseFloat(currentNum, 10);
 
 }
 
 if (operator === "/") {
-runningTotal = parseFloat(firstNum, 10) / parseFloat(secondNum, 10);
+runningTotal = parseFloat(storedNum, 10) / parseFloat(currentNum, 10);
 }
 
-firstNum = runningTotal;
-    secondNum = "";
+storedNum = runningTotal;
+    currentNum = "";
     operator = "";
     displayHere.value = runningTotal;
 }
 
-// function clearLast() {
-// 	display = display.slice(0, - 1);
-// 	//   display = display.replace(/.$/,'');
-// 	//   $("displayHere").html(display);
-// 	document.getElementById("displayHere").value = display;
-// 	//using value rather than innerHTML fixed
-// }
+	
+function clearEntry() {
+	currentNum='';
+	displayHere.value = runningTotal;
+ //   display = display.replace(/.$/,'');
+//  $("displayHere").html(display);
+// document.getElementById("displayHere").value = displayHere;
+// 	using value rather than innerHTML fixed
+}
 
-// function allClear() {
-// 	document.getElementById("displayHere").value =[];
-// 	$("#total").html("");
-// }
+function allClear() {
+document.getElementById("displayHere").value ='';
+}
 // });
 

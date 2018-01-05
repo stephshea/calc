@@ -45,8 +45,8 @@
 			</div>
 			
 			<div>
-				<button class='clear' onclick='allClear()' value='AC'>AC</button>
-				<button class='clear' onclick='clearLast()' value='C'>C</button>
+				<input type= 'button' class='clear' onclick='allClear()' value='AC'>
+				<input type= 'button' class='clear' onclick='clearEntry()' value='C'>
 			</div>
 			<div>
 				<input type='button' class='key' onclick='addNumber("1")' value='1'>
@@ -67,8 +67,8 @@
 				<input type="button" class='operator' onclick='operation("*")' value='*'>
 			</div>
 			<div>
-				<button class='key' onclick='toDisplay("0")' value='0'>0</button>
-				<button class='key' onclick='toDisplay(".")' value='.'>.</button> 
+				<input type='button' class='key' onclick='addNumber("0")' value='0'>
+				<input type='button' class='key' onclick='addNumber(".")' value='.'>
 				<input type='button' id='equal' onclick='equals()' value='='>
 				<input type="button" class='operator' onclick='operation("/")' value='/'>
 			</div>
