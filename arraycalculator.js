@@ -85,7 +85,11 @@ function clearEntry() {
 }
 
 function allClear() {
+    currentNum='';
+    storedNum='';
+    runningTotal='';
 document.getElementById("displayHere").value ='';
+
 }
 // });
 
