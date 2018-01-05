@@ -1,28 +1,88 @@
-<DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<link href="arraycalculator.css" rel="stylesheet">
+	<style>
+		@media screen and (max-width: 420px) 
+		{
+
+			#calculator {
+				width: 360px;
+			}
+
+			#displayHere {
+				font-size: 1.5em;
+				margin: .5em 0;
+			}
+
+			#totalHeading {
+				font-size: 1.5em;
+			}
+			.key, .opp, .equal, .clear {
+				font-size: 1.5em; 
+				width: 2em;
+				height: 2em;
+			}
+		}
+	</style>
+	<title>Calculator</title>
 </head>
 <body>
-    
-   	<input id="displayHere" type="text">
-
-    	<button class='key' type = "number" onclick='toDisplay("4")' value='4'>4</button> 
-		<button class='key' type = "number" onclick='toDisplay("5")' value='5'>5</button> 
-		<button class='key' type = "number" onclick='toDisplay("6")' value='6'>6</button>
-  <button class='multiply' onclick='multiply()' value='=*'>+*</button>
-
-    	<button class='equal' onclick='equal()' value='='>=</button>
-    	  <script src="https://use.fontawesome.com/d117184189.js">
-	</script> 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script> 
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-	</script> 
-    	<script src="arraycalc.js">
-	</script>
+	<div class="container">
+		
+			<form id="calculator">
+            <input type="text" id="displayHere" class="text-right" value="0">
+        
+			
+			<div id='totalHeading'>
+				Total: <span id="total"></span>
+			</div>
+			
+			<div>
+				<button class='clear' onclick='allClear()' value='AC'>AC</button>
+				<button class='clear' onclick='clearLast()' value='C'>C</button>
+			</div>
+			<div>
+				<input type='button' class='key' onclick='addNumber("1")' value='1'>
+				<input type='button' class='key' onclick='addNumber("2")' value='2'>
+				<input type='button' class='key' onclick='addNumber("3")' value='3'> 
+				<input type="button" value="+" class="operator" onclick="operation('+')">
+			</div>
+			<div>
+				<input type='button' class='key' onclick='addNumber("4")' value='4'> 
+				<input type='button' class='key' onclick='addNumber("5")' value='5'>
+				<input type='button' class='key' onclick='addNumber("6")' value='6'>
+				<input type="button" class='operator' onclick='operation("-")' value='-'>
+			</div>
+			<div>
+				<input type='button' class='key' onclick='addNumber("5")' value='7'>
+				<input type='button' class='key' onclick='addNumber("5")' value='8'>
+				<input type='button' class='key' onclick='addNumber("5")' value='9'>
+				<input type="button" class='operator' onclick='operation("*")' value='*'>
+			</div>
+			<div>
+				<button class='key' onclick='toDisplay("0")' value='0'>0</button>
+				<button class='key' onclick='toDisplay(".")' value='.'>.</button> 
+				<input type='button' id='equal' onclick='equals()' value='='>
+				<input type="button" class='operator' onclick='operation("/")' value='/'>
+			</div>
+		</form>
+		</div>
+		</div>
+		<script src="https://use.fontawesome.com/d117184189.js">
+		</script> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+		</script> 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+		</script> 
+		<script src="arraycalculator.js">
+		</script>
+	</div>
 </body>
 </html>
