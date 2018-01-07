@@ -15,7 +15,7 @@
 #totalHeading {
 	font-size: 2em;
 }
-.key, .opp, .equal, .clear {
+.key, .operator, .equal, .clear {
 	font-size: 2em;
 }
 .key {
@@ -29,7 +29,7 @@
 	color: white;
 	height: 3em;
 }
-.equal {
+#equal {
 	width: 3em;
 	background-color: yellow;
 	height: 3em;

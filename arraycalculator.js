@@ -13,12 +13,12 @@ var runningTotal='';
 
 
 
-function addNumber(abby) {
-    console.log("click");
-    currentNum += abby;
+function addNumber(num) {
+    console.log("clicked AddNumber. currentNum: " + currentNum + 'num:' + num);
+    currentNum += num;
 
 displayHere.value = currentNum;
-console.log(displayHere);
+console.log("displayHere" + displayHere + "currentNum " + currentNum);
 }
 
 
@@ -26,7 +26,7 @@ function operation(value) {
     if (storedNum !== "") {
         equals();
         operator = value;
-      
+      console.log("stored num" + storedNum);
     }
     else {
         
@@ -35,7 +35,7 @@ function operation(value) {
         currentNum = "";
         displayHere.value = storedNum;
     }
-    console.log(storedNum, operator);
+    console.log("result of operation function:" + storedNum, operator);
 }
 
 
@@ -52,6 +52,7 @@ console.log("equals");
 
 if (operator === "+") {
 runningTotal = parseFloat(storedNum, 10) + parseFloat(currentNum, 10);
+console.log("plus: storedNum " + storedNum + "currentNum " + currentNum);
 }
 
 if (operator === "-") {
@@ -78,6 +79,7 @@ storedNum = runningTotal;
 function clearEntry() {
 	currentNum='';
 	displayHere.value = runningTotal;
+	console.log("CE, displayHere = runningTotal: " + displayHere);
  //   display = display.replace(/.$/,'');
 //  $("displayHere").html(display);
 // document.getElementById("displayHere").value = displayHere;
@@ -89,7 +91,7 @@ function allClear() {
     storedNum='';
     runningTotal='';
 document.getElementById("displayHere").value ='';
-
+console.log("AC, displayHere: " + displayHere);
 }
 // });
 
