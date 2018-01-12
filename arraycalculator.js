@@ -79,7 +79,7 @@ storedNum = runningTotal;
 function clearEntry() {
 	currentNum='';
 	displayHere.value = runningTotal;
-	console.log("CE, displayHere = runningTotal: " + displayHere);
+	console.log("CE, displayHere, runningTotal: " + displayHere.value + ',' + runningTotal);
  //   display = display.replace(/.$/,'');
 //  $("displayHere").html(display);
 // document.getElementById("displayHere").value = displayHere;
@@ -91,7 +91,7 @@ function allClear() {
     storedNum='';
     runningTotal='';
 document.getElementById("displayHere").value ='';
-console.log("AC, displayHere: " + displayHere);
+console.log("AC, displayHere: " + displayHere.value);
 }
 // });
 
